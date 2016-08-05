@@ -7,9 +7,9 @@ compile 'com.jingtianxiaozhi.eventutil:eventutil-core:1.0.1'
 ```
 
 #How To Use(Too Simple)
-1.让需要接受事件的Activity(Fragment)继承EventActivity(EventFragment)
+1.让需要接受事件的Activity/Fragment继承EventActivity/EventFragment。你也可以将对应的方法拷贝到你的Application中。
 
-2.增加事件，第一个参数是当前Activity(Fragment)，第二个参数是事件Id，第三个参数是事件回调也就是发生事件所需要执行的方法。
+2.增加事件，第一个参数是当前Activity/Fragment，第二个参数是事件Id，第三个参数是事件回调也就是发生事件所需要执行的方法。
 ```java  
 EventBusUtil.get().addConstantCallback(context, 10000, new EventBusCallback() {
     @Override
