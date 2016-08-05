@@ -8,6 +8,7 @@ compile 'com.jingtianxiaozhi.eventutil:eventutil-core:1.0.1'
 
 #How To Use(Too simple)
 1.让你的Activity(Fragment)继承EventActivity(EventFragment)
+
 2.
 ```java  
 EventBusUtil.get().addConstantCallback(context, 10000, new EventBusCallback() {
