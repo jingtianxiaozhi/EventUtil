@@ -16,7 +16,7 @@ EventBusUtil.get().addConstantCallback(context, 10000, new EventBusCallback() {
     public void operate(CareEvent careEvent) {
         //careEvent.paramObj就是你传递的对象，取出传递的对象进行对应的操作。
         if (careEvent.paramObj != null && careEvent.paramObj instanceof String) {
-            Toast.makeText(FirstActivity.this, (String) careEvent.paramObj, Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, (String) careEvent.paramObj, Toast.LENGTH_SHORT).show();
         }
     }
 });
