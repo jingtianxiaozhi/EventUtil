@@ -26,3 +26,5 @@ EventBusUtil.get().addConstantCallback(context, 10000, new EventBusCallback() {
 ```java
 EventBusUtil.post(10000, eventObject);
 ```
+#Tanks for
+https://github.com/greenrobot/EventBus
