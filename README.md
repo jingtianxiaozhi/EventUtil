@@ -1,5 +1,5 @@
 # EventUtil
-EventUtil是EventBus的辅助工具类，免去了反复的registe/unregister以及编写onEventMainThread方法。
+EventUtil是EventBus的辅助工具类库，免去了反复的registe/unregister以及编写onEventMainThread方法。
 
 #Get It
 ```java  
