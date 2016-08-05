@@ -14,6 +14,7 @@ compile 'com.jingtianxiaozhi.eventutil:eventutil-core:1.0.1'
 EventBusUtil.get().addConstantCallback(context, 10000, new EventBusCallback() {
     @Override
     public void operate(CareEvent careEvent) {
+        //careEvent.paramObj就是你传递的对象，取出传递的对象进行对应的操作。
         if (careEvent.paramObj != null && careEvent.paramObj instanceof String) {
             Toast.makeText(FirstActivity.this, (String) careEvent.paramObj, Toast.LENGTH_SHORT).show();
         }
