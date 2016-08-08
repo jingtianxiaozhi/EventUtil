@@ -10,11 +10,14 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 public class EventFragmentActivity extends FragmentActivity {
+    protected boolean isRegiste = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EventBusUtil.get().register(this);
+        if(isRegiste){
+            EventBusUtil.get().register(this);
+        }
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
@@ -29,6 +32,8 @@ public class EventFragmentActivity extends FragmentActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        EventBusUtil.get().unregister(this);
+        if(isRegiste){
+            EventBusUtil.get().unregister(this);
+        }
     }
 }

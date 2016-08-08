@@ -25,6 +25,7 @@ public class FirstActivity extends EventActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        isRegiste = true;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
@@ -36,7 +37,7 @@ public class FirstActivity extends EventActivity {
             @Override
             public void operate(CareEvent careEvent) {
                 if (careEvent.paramObj != null && careEvent.paramObj instanceof String) {
-                    Toast.makeText(FirstActivity.this, (String) careEvent.paramObj, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FirstActivity.this, "FirstActivity:" + (String) careEvent.paramObj, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -46,7 +47,7 @@ public class FirstActivity extends EventActivity {
             public void operate(CareEvent careEvent) {
                 if (careEvent.paramObj != null && careEvent.paramObj instanceof Person) {
                     Person person = (Person) careEvent.paramObj;
-                    Toast.makeText(FirstActivity.this, person.getName() + "," + person.getAge(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(FirstActivity.this, "FirstActivity:" + person.getName() + "," + person.getAge(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
