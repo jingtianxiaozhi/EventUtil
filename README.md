@@ -8,7 +8,7 @@ compile 'com.jingtianxiaozhi.eventutil:eventutil-core:1.0.2'
 
 #How To Use(Too Simple)
 1.让需要接受事件的Activity/Fragment继承EventActivity/EventFragment。或者你也可以将对应的方法拷贝到你的BaseActivity中。
-在oncreate方法中通过控制布尔变量isRegiste的值来控制是否注册事件。
+在onCreate方法中通过控制布尔变量isRegiste的值来控制是否注册事件。
 ```java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
