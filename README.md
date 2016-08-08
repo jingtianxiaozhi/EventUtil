@@ -15,8 +15,7 @@ protected void onCreate(Bundle savedInstanceState) {
     isRegiste = true;
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    ButterKnife.bind(this);
-    initEvent();
+    //...
 }
 ```
 2.增加事件，第一个参数是当前Activity/Fragment，第二个参数是事件Id，第三个参数是事件回调也就是发生事件所需要执行的方法。
