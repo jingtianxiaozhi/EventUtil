@@ -3,7 +3,7 @@ EventUtil是EventBus的辅助工具类库，免去了反复的registe/unregister
 
 #Get It
 ```java  
-compile 'com.jingtianxiaozhi.eventutil:eventutil-core:1.0.1'
+compile 'com.jingtianxiaozhi.eventutil:eventutil-core:1.0.2'
 ```
 
 #How To Use(Too Simple)
