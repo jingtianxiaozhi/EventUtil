@@ -8,7 +8,17 @@ compile 'com.jingtianxiaozhi.eventutil:eventutil-core:1.0.1'
 
 #How To Use(Too Simple)
 1.让需要接受事件的Activity/Fragment继承EventActivity/EventFragment。或者你也可以将对应的方法拷贝到你的BaseActivity中。
-
+在oncreate方法中通过控制布尔变量isRegiste的值来控制是否注册事件。
+```java
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    isRegiste = true;
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    ButterKnife.bind(this);
+    initEvent();
+}
+```
 2.增加事件，第一个参数是当前Activity/Fragment，第二个参数是事件Id，第三个参数是事件回调也就是发生事件所需要执行的方法。
 ```java  
 EventBusUtil.get().addConstantCallback(context, 10000, new EventBusCallback() {
